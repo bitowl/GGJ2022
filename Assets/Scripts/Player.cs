@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 
     private Rigidbody rb;
     private bool doJump;
-    private bool onGround;
+    private int onGround;
     private float drag;
     void Start()
     {
@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (canControlInAir || onGround)
+        if (canControlInAir || onGround > 0)
         {
             float moveHorizontal = Input.GetAxis("Horizontal");
             float moveVertical = Input.GetAxis("Vertical");
@@ -45,14 +45,14 @@ public class Player : MonoBehaviour
             rb.AddForce(movement * speed);
         }
 
-        if (doJump && onGround)
+        if (doJump && onGround > 0)
         {
             rb.AddForce(jumpForce * Vector3.up);
             doJump = false;
         }
 
         // No drag in air
-        rb.drag = onGround ? drag : 0;
+        rb.drag = onGround > 0 ? drag : 0;
     }
 
 
@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.layer == groundLayer)
         {
-            onGround = true;
+            onGround++;
         }
     }
 
@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.layer == groundLayer)
         {
-            onGround = false;
+            onGround--;
         }
     }
 }
