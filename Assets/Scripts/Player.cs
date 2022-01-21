@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Player : MonoBehaviour
@@ -11,36 +12,51 @@ public class Player : MonoBehaviour
     public int groundLayer = 6;
     public bool canControlInAir = false;
 
-    private Rigidbody rb;
     private bool doJump;
+    private Vector2 movementInput;
+
+    private Rigidbody rb;
     private int onGround;
     private float drag;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         drag = rb.drag;
     }
 
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        movementInput = context.ReadValue<Vector2>();
+    }
+
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        doJump = context.action.triggered;
+    }
+
+
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
-        {
-            doJump = true;
-        }
-        if (Input.GetButtonUp("Jump"))
-        {
-            doJump = false;
-        }
+        /*        if (Input.GetButtonDown("Jump"))
+                {
+                    doJump = true;
+                }
+                if (Input.GetButtonUp("Jump"))
+                {
+                    doJump = false;
+                }*/
     }
 
     void FixedUpdate()
     {
         if (canControlInAir || onGround > 0)
         {
-            float moveHorizontal = Input.GetAxis("Horizontal");
-            float moveVertical = Input.GetAxis("Vertical");
+            /*float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVertical = Input.GetAxis("Vertical");*/
 
-            Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+            //Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+            Vector3 movement = new Vector3(movementInput.x, 0.0f, movementInput.y);
 
             rb.AddForce(movement * speed);
         }
