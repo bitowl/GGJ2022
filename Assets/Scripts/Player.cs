@@ -14,9 +14,11 @@ public class Player : MonoBehaviour
     private Rigidbody rb;
     private bool doJump;
     private bool onGround;
+    private float drag;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        drag = rb.drag;
     }
 
     void Update()
@@ -24,6 +26,10 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             doJump = true;
+        }
+        if (Input.GetButtonUp("Jump"))
+        {
+            doJump = false;
         }
     }
 
@@ -44,6 +50,9 @@ public class Player : MonoBehaviour
             rb.AddForce(jumpForce * Vector3.up);
             doJump = false;
         }
+
+        // No drag in air
+        rb.drag = onGround ? drag : 0;
     }
 
 
