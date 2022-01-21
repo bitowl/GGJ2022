@@ -77,6 +77,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
+  jumpForce: 500
+  groundLayer: 6
 --- !u!1001 &4500585266111801410
 PrefabInstance:
   m_ObjectHideFlags: 0
