@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public float jumpForce = 3;
     public int groundLayer = 6;
     public bool canControlInAir = false;
+    public float jumpCooldown = 0.1f;
 
     private bool doJump;
     private Vector2 movementInput;
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
     private Rigidbody rb;
     private int onGround;
     private float drag;
+    private float nextJump = 0;
 
     void Start()
     {
@@ -32,12 +34,24 @@ public class Player : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
+        /*if ()
+        {
+            doJump = true;
+        }
+        if (context.action.cancelled)
+        {
+            doJump = false;
+        }*/
         doJump = context.action.triggered;
     }
 
 
     void Update()
     {
+        if (nextJump > 0)
+        {
+            nextJump -= Time.deltaTime;
+        }
         /*        if (Input.GetButtonDown("Jump"))
                 {
                     doJump = true;
@@ -61,10 +75,11 @@ public class Player : MonoBehaviour
             rb.AddForce(movement * speed);
         }
 
-        if (doJump && onGround > 0)
+        if (doJump && onGround > 0 && nextJump <= 0)
         {
             rb.AddForce(jumpForce * Vector3.up);
-            doJump = false;
+            // doJump = false; // comment out 
+            nextJump = jumpCooldown;
         }
 
         // No drag in air
