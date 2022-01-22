@@ -71,6 +71,7 @@ MonoBehaviour:
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   playerData: {fileID: 0}
+  rotateSpeed: 30
 --- !u!114 &1769866172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,8 +129,24 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 94028419-76c0-4c8f-9f73-233820b88c45
     m_ActionName: Player/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4500585265367072389}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnRotate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 44c7302a-675e-4dc5-ac08-6125fdbf6712
+    m_ActionName: Player/Rotate[/Keyboard/q,/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: P1_Keyboard
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}

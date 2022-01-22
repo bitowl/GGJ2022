@@ -18,4 +18,5 @@ public class CharacterData : ScriptableObject
     [Required]
     public GameObject modelPrefab;
     public Team team;
+    public bool hasRotateControls;
 }
