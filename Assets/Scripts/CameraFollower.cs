@@ -7,17 +7,26 @@ public class CameraFollower : MonoBehaviour
 {
     public GameObject target;
     private Camera cam;
-    private Vector3 offset;
+    private static Vector3 initialOffset = new Vector3(0.19f, -11f, 2.8f);
+    public Vector3 offset = initialOffset;
     private float z;
     void Start()
     {
         cam = GetComponent<Camera>();
-        offset = target.transform.position - cam.transform.position;
+        //offset = target.transform.position - cam.transform.position;
         //z =
+        // TODO tmp workaround as the initialOffset is not set in some scenes?
+        if (offset == Vector3.zero)
+        {
+            offset = initialOffset;
+        }
     }
 
     void Update()
     {
-        transform.position = target.transform.position - offset;
+        if (target)
+        {
+            transform.position = target.transform.position - offset;
+        }
     }
 }
