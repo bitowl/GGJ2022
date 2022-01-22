@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
     public PlayerData playerData;
+    public float rotateSpeed = 50f;
 
     private bool doJump;
     private Vector2 movementInput;
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour
     private int onGround;
     private float drag;
     private float nextJump = 0;
+    private float rotate = 0;
 
     void Start()
     {
@@ -48,6 +50,15 @@ public class Player : MonoBehaviour
         doJump = context.action.triggered;
     }
 
+    public void OnRotate(InputAction.CallbackContext context)
+    {
+        if (playerData.character.hasRotateControls)
+        {
+            float value = context.ReadValue<float>();
+            Debug.Log($"Rotate {value}");
+            rotate = value;
+        }
+    }
 
     void Update()
     {
@@ -94,6 +105,13 @@ public class Player : MonoBehaviour
         {
             rb.AddForce(Physics.gravity * (lowJumpMultiplier - 1), ForceMode.Acceleration);
         }
+
+        // Add torge to rotate long objects
+        if (rotate != 0)
+        {
+            rb.AddTorque(Vector3.up * rotate * rotateSpeed, ForceMode.Acceleration);
+        }
+
 
         // No drag in air
         rb.drag = onGround > 0 ? drag : 0;

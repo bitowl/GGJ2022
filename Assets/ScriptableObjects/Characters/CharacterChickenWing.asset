@@ -16,3 +16,4 @@ MonoBehaviour:
   damageMultiplier: 1
   modelPrefab: {fileID: 7022341222479755536, guid: da655c0784fc8cf4c9f73b1c2ece5204, type: 3}
   team: 1
+  hasRotateControls: 1

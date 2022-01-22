@@ -47,16 +47,17 @@ public class PlayerManager : MonoBehaviour
 
     private void SpawnPlayer(int index, PlayerConfig config)
     {
-        var player = PlayerInput.Instantiate(playerPrefab, controlScheme: level.playerChoices[index].controlScheme, pairWithDevice: Keyboard.current); // TODO add support for pairing with gamepads?
+        var playerChoice = level.playerChoices[index];
+        var player = PlayerInput.Instantiate(playerPrefab, controlScheme: playerChoice.controlScheme, pairWithDevice: playerChoice.inputDevice);
         GameObject gameObject = player.gameObject;
         Debug.Log(player.currentControlScheme);
-        config.playerData.character = level.playerChoices[index].character;
+        config.playerData.character = playerChoice.character;
         player.GetComponent<Player>().playerData = config.playerData;
         config.camera.target = gameObject;
         player.transform.position = level.spawnPoints[index].position; // TODO choose between multiple spawn positions?
 
         // Instantiate character
-        GameObject characterModel = Instantiate(level.playerChoices[index].character.modelPrefab, Vector3.zero, Quaternion.identity);
+        GameObject characterModel = Instantiate(playerChoice.character.modelPrefab, Vector3.zero, Quaternion.identity);
         characterModel.transform.SetParent(gameObject.transform, false);
         config.playerData.charComponent = characterModel.GetComponent<Character>();
 
