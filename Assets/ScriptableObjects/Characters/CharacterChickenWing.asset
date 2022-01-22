@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 720edf0a709ee6143aef92d1a5b6d438, type: 3}
+  m_Name: CharacterChickenWing
+  m_EditorClassIdentifier: 
+  health: 100
+  damageMultiplier: 1
+  modelPrefab: {fileID: 7022341222479755536, guid: da655c0784fc8cf4c9f73b1c2ece5204, type: 3}
+  team: 1

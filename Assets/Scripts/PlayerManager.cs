@@ -1,18 +1,20 @@
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerManager : MonoBehaviour
 {
+    public GameObject playerPrefab;
     [System.Serializable]
     public class PlayerConfig
     {
-        public GameObject playerPrefab;
-        public string controlScheme;
-        public InputDevice pairWithDevice;
+
+        //public InputDevice pairWithDevice;
         //public Transform spawnPoint;
+        [Required]
         public CameraFollower camera;
+        [Required]
         public PlayerData playerData;
-        public CharacterData character;
     }
 
     public Level level;
@@ -29,12 +31,7 @@ public class PlayerManager : MonoBehaviour
         int i = 0;
         foreach (var config in playerConfigs)
         {
-            var player = PlayerInput.Instantiate(config.playerPrefab, controlScheme: config.controlScheme, pairWithDevice: Keyboard.current); // TODO add support for pairing with gamepads?
-            Debug.Log(player.currentControlScheme);
-            config.playerData.character = config.character;
-            player.GetComponent<Player>().playerData = config.playerData;
-            config.camera.target = player.gameObject;
-            player.transform.position = level.spawnPoints[i].position; // TODO 
+            SpawnPlayer(i, config);
             //config.spawnPoint.position;
             i++;
         }
@@ -45,5 +42,24 @@ public class PlayerManager : MonoBehaviour
                 camera2.target = player2.gameObject;
                 player1.transform.position = spawnPoint1.position;
                 player2.transform.position = spawnPoint2.position;*/
+    }
+
+
+    private void SpawnPlayer(int index, PlayerConfig config)
+    {
+        var player = PlayerInput.Instantiate(playerPrefab, controlScheme: level.playerChoices[index].controlScheme, pairWithDevice: Keyboard.current); // TODO add support for pairing with gamepads?
+        GameObject gameObject = player.gameObject;
+        Debug.Log(player.currentControlScheme);
+        config.playerData.character = level.playerChoices[index].character;
+        player.GetComponent<Player>().playerData = config.playerData;
+        config.camera.target = gameObject;
+        player.transform.position = level.spawnPoints[index].position; // TODO choose between multiple spawn positions?
+
+        // Instantiate character
+        GameObject characterModel = Instantiate(level.playerChoices[index].character.modelPrefab, Vector3.zero, Quaternion.identity);
+        characterModel.transform.SetParent(gameObject.transform, false);
+        config.playerData.charComponent = characterModel.GetComponent<Character>();
+
+        gameObject.name = $"Player{index}";
     }
 }

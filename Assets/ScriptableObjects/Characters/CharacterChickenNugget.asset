@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 720edf0a709ee6143aef92d1a5b6d438, type: 3}
-  m_Name: Tomato
+  m_Name: CharacterChickenNugget
   m_EditorClassIdentifier: 
   health: 100
   damageMultiplier: 1
-  modelPrefab: {fileID: 4500585265367072386, guid: 5bdcd2b01244996498162f31c4f50758,
-    type: 3}
-  team: 0
+  modelPrefab: {fileID: 3954142962493064175, guid: 61ddeb6fbc4bbec44b364aead1ff4990, type: 3}
+  team: 1

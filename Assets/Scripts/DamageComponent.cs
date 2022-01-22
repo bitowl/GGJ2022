@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Player))]
 public class DamageComponent : MonoBehaviour
@@ -24,6 +25,7 @@ public class DamageComponent : MonoBehaviour
         //Debug.Log("get player data " + playerData);
         playerData.maxHealth = playerData.character.health;
         playerData.currentHealth = playerData.character.health;
+        playerData.charComponent.ShowModelForHealth(playerData.currentHealth / playerData.maxHealth);
     }
 
 
@@ -53,5 +55,15 @@ public class DamageComponent : MonoBehaviour
     public void TakeDamage(float damage)
     {
         playerData.currentHealth -= damage;
+        playerData.charComponent.ShowModelForHealth(playerData.currentHealth / playerData.maxHealth);
+        if (playerData.currentHealth <= 0)
+        {
+            Reload();
+        }
+    }
+
+    public void Reload()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }
