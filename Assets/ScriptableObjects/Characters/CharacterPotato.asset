@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 720edf0a709ee6143aef92d1a5b6d438, type: 3}
-  m_Name: Tomato 1
+  m_Name: CharacterPotato
   m_EditorClassIdentifier: 
   health: 100
   damageMultiplier: 1
-  modelPrefab: {fileID: 0}
+  modelPrefab: {fileID: 6657478786938709028, guid: 0f005d3fde814fe45aa62ffba52aba1a, type: 3}
   team: 0
