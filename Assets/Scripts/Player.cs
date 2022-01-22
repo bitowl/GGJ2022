@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
     public int groundLayer = 6;
     public bool canControlInAir = false;
     public float jumpCooldown = 0.1f;
+    public float fallMultiplier = 2.5f;
+    public float lowJumpMultiplier = 2f;
+    public PlayerData playerData;
 
     private bool doJump;
     private Vector2 movementInput;
@@ -77,9 +80,19 @@ public class Player : MonoBehaviour
 
         if (doJump && onGround > 0 && nextJump <= 0)
         {
-            rb.AddForce(jumpForce * Vector3.up);
+            rb.AddForce(jumpForce * Vector3.up, ForceMode.Impulse);
             // doJump = false; // comment out 
             nextJump = jumpCooldown;
+        }
+
+        // Fall faster, ability to jump higher if jump is kept pressed
+        if (rb.velocity.y < 0)
+        {
+            rb.AddForce(Physics.gravity * (fallMultiplier - 1), ForceMode.Acceleration);
+        }
+        else if (rb.velocity.y > 0 && !doJump)
+        {
+            rb.AddForce(Physics.gravity * (lowJumpMultiplier - 1), ForceMode.Acceleration);
         }
 
         // No drag in air

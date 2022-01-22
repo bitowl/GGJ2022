@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4500585265367072390}
   - component: {fileID: 4500585265367072389}
   - component: {fileID: 1769866172}
+  - component: {fileID: 6528416927571382364}
   m_Layer: 0
   m_Name: PlayerTomate
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,9 +79,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  jumpForce: 500
+  jumpForce: 7
   groundLayer: 6
   canControlInAir: 0
+  jumpCooldown: 0.1
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
+  playerData: {fileID: 0}
 --- !u!114 &1769866172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,11 +144,23 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 94028419-76c0-4c8f-9f73-233820b88c45
     m_ActionName: Player/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: P1_Keyboard
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &6528416927571382364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4500585265367072386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e213435ba6eea4a409594f78b88aebf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4500585266111801410
 PrefabInstance:
   m_ObjectHideFlags: 0
