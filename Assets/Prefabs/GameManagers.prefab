@@ -52,6 +52,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   playerManager: {fileID: 38202158292032089}
+  playerChoices:
+  - {fileID: 11400000, guid: 9ccccc02421c4e24fac06a5711329e03, type: 2}
+  - {fileID: 11400000, guid: e127a24f2af276a4386c8ac1956c2b7b, type: 2}
 --- !u!1 &38202158292032090
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,14 +147,10 @@ MonoBehaviour:
   playerPrefab: {fileID: 4500585265367072386, guid: 26cb7e400694b604abce200a1ffe7f1f, type: 3}
   level: {fileID: 38202157857225319}
   playerConfigs:
-  - controlScheme: P1_Keyboard
-    camera: {fileID: 38202158339917709}
+  - camera: {fileID: 38202158339917709}
     playerData: {fileID: 11400000, guid: 129c708ff4d76c5489070c8da701994c, type: 2}
-    character: {fileID: 11400000, guid: 8136e057e34cf8e46b65d54ce5f91bcd, type: 2}
-  - controlScheme: P2_Keyboard
-    camera: {fileID: 38202159506522476}
+  - camera: {fileID: 38202159506522476}
     playerData: {fileID: 11400000, guid: 472e4df2a88bcad45aea189fa4b6289e, type: 2}
-    character: {fileID: 11400000, guid: 0d5d6f8c6a5b6224db4968519614fe1a, type: 2}
 --- !u!1 &38202158339917696
 GameObject:
   m_ObjectHideFlags: 0
