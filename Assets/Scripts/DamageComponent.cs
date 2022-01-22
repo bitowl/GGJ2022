@@ -50,6 +50,13 @@ public class DamageComponent : MonoBehaviour
             Debug.Log($"Deal {damage} damage {rb.name} {rb.velocity.magnitude}");
             otherDamage.TakeDamage(damage);
         }
+        else
+        {
+            // Collided with anyself, take some damage
+            float myVelocity = cachedVelocity.magnitude;
+            float damage = myVelocity * playerData.character.environmentDamageMultiplier;
+            TakeDamage(damage);
+        }
     }
 
     public void TakeDamage(float damage)

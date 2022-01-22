@@ -55,7 +55,6 @@ public class Player : MonoBehaviour
         if (playerData.character.hasRotateControls)
         {
             float value = context.ReadValue<float>();
-            Debug.Log($"Rotate {value}");
             rotate = value;
         }
     }

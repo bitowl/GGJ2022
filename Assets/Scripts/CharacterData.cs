@@ -15,6 +15,7 @@ public class CharacterData : ScriptableObject
 {
     public float health = 100;
     public float damageMultiplier = 1;
+    public float environmentDamageMultiplier = 0.1f;
     [Required]
     public GameObject modelPrefab;
     public Team team;
