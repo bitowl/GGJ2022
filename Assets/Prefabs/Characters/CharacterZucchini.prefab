@@ -63,7 +63,7 @@ MonoBehaviour:
   colliderToMove: {fileID: 529071892892800517}
   destructionMeshes:
   - moreThan: 0
-    gameObject: {fileID: 1814834934170605400}
+    gameObject: {fileID: 3415628454550299842, guid: 2f9f4b0d99ad2cd43803effa3748b2f5, type: 3}
 --- !u!1001 &529071891430056645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133,10 +133,5 @@ PrefabInstance:
 --- !u!4 &1325261625451941346 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1527813704820731687, guid: 71b0d2b9a9399164e8f9ba813f5fcacc, type: 3}
-  m_PrefabInstance: {fileID: 529071891430056645}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1814834934170605400 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2195560708154881437, guid: 71b0d2b9a9399164e8f9ba813f5fcacc, type: 3}
   m_PrefabInstance: {fileID: 529071891430056645}
   m_PrefabAsset: {fileID: 0}
