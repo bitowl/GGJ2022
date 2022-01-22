@@ -123,6 +123,39 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4814755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4814756}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4814756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4814755}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.211, y: 31.926662, z: -17.453001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 873007396}
+  - {fileID: 1822363194}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &269485849
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,11 +186,16 @@ Transform:
   m_Children:
   - {fileID: 543450652388243610}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &873007390 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4500585265367072386, guid: 5bdcd2b01244996498162f31c4f50758, type: 3}
+  m_PrefabInstance: {fileID: 906262975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &873007396 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4500585265367072385, guid: 5bdcd2b01244996498162f31c4f50758, type: 3}
   m_PrefabInstance: {fileID: 906262975}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &906262975
@@ -165,23 +203,27 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 4814756}
     m_Modifications:
+    - target: {fileID: 3005272959453623494, guid: 5bdcd2b01244996498162f31c4f50758, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cabfdb579cb4afe46b571dcbb0d9ffe7, type: 2}
     - target: {fileID: 4500585265367072385, guid: 5bdcd2b01244996498162f31c4f50758, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4500585265367072385, guid: 5bdcd2b01244996498162f31c4f50758, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.21
+      value: 0.0010004044
       objectReference: {fileID: 0}
     - target: {fileID: 4500585265367072385, guid: 5bdcd2b01244996498162f31c4f50758, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 31.64
+      value: -0.28666306
       objectReference: {fileID: 0}
     - target: {fileID: 4500585265367072385, guid: 5bdcd2b01244996498162f31c4f50758, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.45
+      value: 0.0030002594
       objectReference: {fileID: 0}
     - target: {fileID: 4500585265367072385, guid: 5bdcd2b01244996498162f31c4f50758, type: 3}
       propertyPath: m_LocalRotation.w
@@ -189,15 +231,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4500585265367072385, guid: 5bdcd2b01244996498162f31c4f50758, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4500585265367072385, guid: 5bdcd2b01244996498162f31c4f50758, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4500585265367072385, guid: 5bdcd2b01244996498162f31c4f50758, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4500585265367072385, guid: 5bdcd2b01244996498162f31c4f50758, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -399,7 +441,7 @@ Transform:
   - {fileID: 1522172138}
   - {fileID: 1327576229}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1822363191
 GameObject:
@@ -479,13 +521,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822363191}
-  m_LocalRotation: {x: 0.6056413, y: 0, z: 0, w: 0.79573786}
-  m_LocalPosition: {x: -8.4, y: 42.6, z: -20.3}
+  m_LocalRotation: {x: 0.6056413, y: -0, z: -0, w: 0.79573786}
+  m_LocalPosition: {x: -0.18899918, y: 10.673336, z: -2.8469982}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 4814756}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 74.55, y: 0, z: 0}
 --- !u!114 &1822363195
 MonoBehaviour:
@@ -571,7 +613,7 @@ GameObject:
   - component: {fileID: 5497847505072263842}
   - component: {fileID: 1751391999030256880}
   - component: {fileID: 3272997860001663464}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plant_Red-Chilli_A_spring-summer-autumn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -778,7 +820,8 @@ GameObject:
   - component: {fileID: 3745622627510854655}
   - component: {fileID: 5334037118353036641}
   - component: {fileID: 4539702729226979774}
-  m_Layer: 0
+  - component: {fileID: 5334037118353036642}
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -794,7 +837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450652388243610}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arena1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -843,7 +886,8 @@ GameObject:
   - component: {fileID: 7136081646154279074}
   - component: {fileID: 3129129853943131755}
   - component: {fileID: 59324159699380045}
-  m_Layer: 0
+  - component: {fileID: 7136081646154279075}
+  m_Layer: 6
   m_Name: Geschirr.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -941,7 +985,7 @@ GameObject:
   - component: {fileID: 4833908616473595970}
   - component: {fileID: 218075491874767163}
   - component: {fileID: 7056020136922636378}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pot_Twisted-Cube-Grey-Metal_A_spring-summer-autumn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -982,7 +1026,8 @@ GameObject:
   - component: {fileID: 7866823486920407892}
   - component: {fileID: 3561053133727445288}
   - component: {fileID: 5169954674857490730}
-  m_Layer: 0
+  - component: {fileID: 7866823486920407893}
+  m_Layer: 6
   m_Name: Brett
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1035,7 +1080,7 @@ GameObject:
   - component: {fileID: 258347793006371992}
   - component: {fileID: 2050249873595358286}
   - component: {fileID: 6536054518650616018}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pot_Twisted-Cube-Grey-Metal_A_spring-summer-autumn.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1053,7 +1098,7 @@ GameObject:
   - component: {fileID: 2404832238699429364}
   - component: {fileID: 4507458429189115528}
   - component: {fileID: 658366844127171763}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plant_Red-Chilli_A_spring-summer-autumn.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1136,7 +1181,8 @@ GameObject:
   - component: {fileID: 616987318909278613}
   - component: {fileID: 2149220761953007184}
   - component: {fileID: 4148927352086153059}
-  m_Layer: 0
+  - component: {fileID: 4148927352086153060}
+  m_Layer: 6
   m_Name: Topf.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1154,7 +1200,8 @@ GameObject:
   - component: {fileID: 7704372988953578159}
   - component: {fileID: 6262260754490328111}
   - component: {fileID: 3477349375521496023}
-  m_Layer: 0
+  - component: {fileID: 7704372988953578160}
+  m_Layer: 6
   m_Name: Topf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1196,7 +1243,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 07d508d5ebf59ed4b947f3cb6ef20cb8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1229,7 +1276,7 @@ GameObject:
   - component: {fileID: 2955782886942553086}
   - component: {fileID: 4836446320338360018}
   - component: {fileID: 2881162688727845894}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plant_Red-Chilli_A_spring-summer-autumn.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1416,7 +1463,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 07d508d5ebf59ed4b947f3cb6ef20cb8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1494,13 +1541,28 @@ GameObject:
   - component: {fileID: 1408897576949113590}
   - component: {fileID: 1320422919143115516}
   - component: {fileID: 2749270586519486476}
-  m_Layer: 0
+  - component: {fileID: 3499118063033341947}
+  m_Layer: 6
   m_Name: Hahn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &3499118063033341947
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3499118063033341946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6780154334448720225, guid: f97d533b777f13246ab404e7668b074b, type: 3}
 --- !u!33 &3561053133727445288
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1520,7 +1582,7 @@ GameObject:
   - component: {fileID: 6645823805609755968}
   - component: {fileID: 5366159434844809012}
   - component: {fileID: 7202271455954004398}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1678,7 +1740,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 07d508d5ebf59ed4b947f3cb6ef20cb8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1700,6 +1762,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4148927352086153060
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2489311432728581433}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4232153079701330314, guid: f97d533b777f13246ab404e7668b074b, type: 3}
 --- !u!4 &4152576696938604702
 Transform:
   m_ObjectHideFlags: 0
@@ -1777,7 +1853,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 07d508d5ebf59ed4b947f3cb6ef20cb8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1936,7 +2012,7 @@ GameObject:
   - component: {fileID: 8318324934325785658}
   - component: {fileID: 955786689798918111}
   - component: {fileID: 3839569785965193467}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pot_Twisted-Cube-Grey-Metal_A_spring-summer-autumn.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2030,6 +2106,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832149485373189397}
   m_Mesh: {fileID: -5495902117074765545, guid: f97d533b777f13246ab404e7668b074b, type: 3}
+--- !u!64 &5334037118353036642
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832149485373189397}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: f97d533b777f13246ab404e7668b074b, type: 3}
 --- !u!1 &5337098940970268488
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,7 +2131,7 @@ GameObject:
   - component: {fileID: 3948019101446523232}
   - component: {fileID: 8453587947618475765}
   - component: {fileID: 5980389344551906412}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pot_Twisted-Cube-Grey-Metal_A_spring-summer-autumn.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2082,13 +2172,28 @@ GameObject:
   - component: {fileID: 1353716095424161520}
   - component: {fileID: 3252152848059930660}
   - component: {fileID: 2246814874321362757}
-  m_Layer: 0
+  - component: {fileID: 5538959751787878811}
+  m_Layer: 6
   m_Name: Geschirr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &5538959751787878811
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5538959751787878810}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1634852874356896616, guid: f97d533b777f13246ab404e7668b074b, type: 3}
 --- !u!33 &5617037455633047687
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2282,7 +2387,7 @@ GameObject:
   - component: {fileID: 5679595169140411962}
   - component: {fileID: 6054275565556067337}
   - component: {fileID: 3484371655593473013}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plant_Red-Chilli_A_spring-summer-autumn.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2418,6 +2523,20 @@ Transform:
   m_Father: {fileID: 543450652388243610}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &7136081646154279075
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097112384037517196}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -9210326984619103770, guid: f97d533b777f13246ab404e7668b074b, type: 3}
 --- !u!23 &7202271455954004398
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2471,7 +2590,7 @@ GameObject:
   - component: {fileID: 5831825303711725934}
   - component: {fileID: 2443811515251164241}
   - component: {fileID: 4176757133453350839}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wasser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2489,7 +2608,7 @@ GameObject:
   - component: {fileID: 1767812652765615933}
   - component: {fileID: 5617037455633047687}
   - component: {fileID: 7568912769885790521}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wand.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2507,7 +2626,7 @@ GameObject:
   - component: {fileID: 2747005099792121806}
   - component: {fileID: 3389053468269464431}
   - component: {fileID: 3957934404131090316}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pot_Twisted-Cube-Grey-Metal_A_spring-summer-autumn.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2572,6 +2691,20 @@ Transform:
   m_Father: {fileID: 543450652388243610}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &7704372988953578160
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2607783527874307237}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8771351412682321853, guid: f97d533b777f13246ab404e7668b074b, type: 3}
 --- !u!23 &7762067043326459232
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2625,13 +2758,28 @@ GameObject:
   - component: {fileID: 3438529579705606070}
   - component: {fileID: 5102777296157007686}
   - component: {fileID: 4227838700347742979}
-  m_Layer: 0
+  - component: {fileID: 7807643413780023130}
+  m_Layer: 6
   m_Name: Pfanne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &7807643413780023130
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7807643413780023129}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8160632170184555326, guid: f97d533b777f13246ab404e7668b074b, type: 3}
 --- !u!1 &7839703654115289473
 GameObject:
   m_ObjectHideFlags: 0
@@ -2643,7 +2791,7 @@ GameObject:
   - component: {fileID: 396868723561074474}
   - component: {fileID: 6553162243598508689}
   - component: {fileID: 4798529576450051520}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plant_Red-Chilli_A_spring-summer-autumn.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2665,6 +2813,20 @@ Transform:
   m_Father: {fileID: 543450652388243610}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &7866823486920407893
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816334585572716772}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1104245157416999732, guid: f97d533b777f13246ab404e7668b074b, type: 3}
 --- !u!23 &8253871348514985301
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2733,7 +2895,8 @@ GameObject:
   - component: {fileID: 5680519943484432200}
   - component: {fileID: 3010172808145875105}
   - component: {fileID: 8544783547300427964}
-  m_Layer: 0
+  - component: {fileID: 8544783547300427965}
+  m_Layer: 6
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2790,6 +2953,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8544783547300427965
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416272006946856596}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1550514412580984892, guid: f97d533b777f13246ab404e7668b074b, type: 3}
 --- !u!1 &8707273952044785505
 GameObject:
   m_ObjectHideFlags: 0
@@ -2801,7 +2978,7 @@ GameObject:
   - component: {fileID: 4083501150520411868}
   - component: {fileID: 3260616447395554545}
   - component: {fileID: 7762067043326459232}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2819,10 +2996,25 @@ GameObject:
   - component: {fileID: 925942736087468323}
   - component: {fileID: 1047121659373451884}
   - component: {fileID: 8253871348514985301}
-  m_Layer: 0
+  - component: {fileID: 9014499716531278868}
+  m_Layer: 6
   m_Name: Wand.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &9014499716531278868
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9014499716531278867}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2486726442887471774, guid: f97d533b777f13246ab404e7668b074b, type: 3}
