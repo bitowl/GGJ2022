@@ -27,6 +27,7 @@ public class Character : MonoBehaviour
             {
                 if (healthPercentage >= mesh.moreThan)
                 {
+                    Debug.Log($"Show {mesh.gameObject.name}");
                     mesh.gameObject.SetActive(true);
                     found = true;
                 }
