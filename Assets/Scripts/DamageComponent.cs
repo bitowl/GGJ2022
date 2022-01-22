@@ -14,7 +14,13 @@ public class DamageComponent : MonoBehaviour
     void Start()
     {
         playerData = GetComponent<Player>().playerData;
-        Debug.Log("get player data " + playerData);
+        if (!playerData)
+        {
+            Debug.LogWarning("Damage component does not work here. (Players are probably not spawned by PlayerManager)");
+            Destroy(this);
+            return;
+        }
+        //Debug.Log("get player data " + playerData);
         playerData.maxHealth = playerData.character.health;
         playerData.currentHealth = playerData.character.health;
     }
@@ -29,6 +35,7 @@ public class DamageComponent : MonoBehaviour
             // Damage the other player according to our velocity. The other player will damage us according to their velocity in their collision method.
             float myVelocity = rb.velocity.magnitude;
             float damage = myVelocity * playerData.character.damageMultiplier;
+            Debug.Log($"Deal {damage} damage {rb.name} {rb.velocity.magnitude}");
             otherDamage.TakeDamage(damage);
         }
     }
