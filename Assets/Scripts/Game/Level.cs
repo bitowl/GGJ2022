@@ -1,4 +1,5 @@
 using UnityEngine;
+using NaughtyAttributes;
 
 public class Level : MonoBehaviour
 {
@@ -6,6 +7,9 @@ public class Level : MonoBehaviour
     public Transform[] spawnPoints;
 
     public PlayerManager playerManager;
+
+    [Expandable]
+    public PlayerChoice[] playerChoices;
 
     void Awake()
     {

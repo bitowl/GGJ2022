@@ -411,10 +411,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterZucchini
       objectReference: {fileID: 0}
-    - target: {fileID: 529071892892800519, guid: a3a990f5d6cf9db4eaed89a09aaa4acc, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3a990f5d6cf9db4eaed89a09aaa4acc, type: 3}
 --- !u!1001 &1872230258634295498
@@ -528,10 +524,6 @@ PrefabInstance:
     - target: {fileID: 6657478786938709028, guid: 0f005d3fde814fe45aa62ffba52aba1a, type: 3}
       propertyPath: m_Name
       value: CharacterPotato
-      objectReference: {fileID: 0}
-    - target: {fileID: 6657478786938709028, guid: 0f005d3fde814fe45aa62ffba52aba1a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f005d3fde814fe45aa62ffba52aba1a, type: 3}

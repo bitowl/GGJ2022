@@ -14,5 +14,7 @@ public class PlayerData : ScriptableObject
     public float currentHealth;
     [ReadOnly]
     public float maxHealth;
+    [ReadOnly]
+    public Character charComponent;
 
 }

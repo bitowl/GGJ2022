@@ -141,18 +141,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78c17c6986a1ac4499fd26ff2193279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 4500585265367072386, guid: 26cb7e400694b604abce200a1ffe7f1f, type: 3}
   level: {fileID: 38202157857225319}
   playerConfigs:
-  - playerPrefab: {fileID: 4500585265367072386, guid: 5bdcd2b01244996498162f31c4f50758, type: 3}
-    controlScheme: P1_Keyboard
+  - controlScheme: P1_Keyboard
     camera: {fileID: 38202158339917709}
     playerData: {fileID: 11400000, guid: 129c708ff4d76c5489070c8da701994c, type: 2}
-    character: {fileID: 11400000, guid: 01fd32098d803bc46bb6e459c24c133a, type: 2}
-  - playerPrefab: {fileID: 7792102871096445745, guid: e8f5e0442438d2245b0a4f7ddc7fc0be, type: 3}
-    controlScheme: P2_Keyboard
+    character: {fileID: 11400000, guid: 8136e057e34cf8e46b65d54ce5f91bcd, type: 2}
+  - controlScheme: P2_Keyboard
     camera: {fileID: 38202159506522476}
     playerData: {fileID: 11400000, guid: 472e4df2a88bcad45aea189fa4b6289e, type: 2}
-    character: {fileID: 11400000, guid: 01fd32098d803bc46bb6e459c24c133a, type: 2}
+    character: {fileID: 11400000, guid: 0d5d6f8c6a5b6224db4968519614fe1a, type: 2}
 --- !u!1 &38202158339917696
 GameObject:
   m_ObjectHideFlags: 0
