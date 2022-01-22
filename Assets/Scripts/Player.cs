@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,7 +22,8 @@ public class Player : MonoBehaviour
     private Vector2 movementInput;
 
     private Rigidbody rb;
-    private int onGround;
+    /*[ReadOnly]
+    public int onGround;*/
     private float drag;
     private float nextJump = 0;
     private float rotate = 0;
@@ -77,7 +79,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (canControlInAir || onGround > 0)
+        if (canControlInAir || groundTouched.Count > 0)
         {
             /*float moveHorizontal = Input.GetAxis("Horizontal");
             float moveVertical = Input.GetAxis("Vertical");*/
@@ -88,7 +90,7 @@ public class Player : MonoBehaviour
             rb.AddForce(movement * speed);
         }
 
-        if (doJump && onGround > 0 && nextJump <= 0)
+        if (doJump && groundTouched.Count > 0 && nextJump <= 0)
         {
             rb.AddForce(jumpForce * Vector3.up, ForceMode.Impulse);
             // doJump = false; // comment out 
@@ -113,24 +115,26 @@ public class Player : MonoBehaviour
 
 
         // No drag in air
-        rb.drag = onGround > 0 ? drag : 0;
+        rb.drag = groundTouched.Count > 0 ? drag : 0;
     }
 
+
+    private List<Collider> groundTouched = new List<Collider>();
 
     // TODO fix when we can collide with two ground objects
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == groundLayer)
+        if (collision.gameObject.layer == groundLayer && !groundTouched.Contains(collision.collider))
         {
-            onGround++;
+            groundTouched.Add(collision.collider);
         }
     }
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.layer == groundLayer)
+        if (collision.gameObject.layer == groundLayer && groundTouched.Contains(collision.collider))
         {
-            onGround--;
+            groundTouched.Remove(collision.collider);
         }
     }
 }
