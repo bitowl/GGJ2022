@@ -5,6 +5,7 @@ public class DamageComponent : MonoBehaviour
 {
     private PlayerData playerData;
     private Rigidbody rb;
+    private Vector3 cachedVelocity;
 
     void Awake()
     {
@@ -25,6 +26,15 @@ public class DamageComponent : MonoBehaviour
         playerData.currentHealth = playerData.character.health;
     }
 
+
+
+    void FixedUpdate()
+    {
+        // Need to cache the velocity, because OnCollionEnter already has the velocities after the collision
+        cachedVelocity = rb.velocity;
+    }
+
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -33,7 +43,7 @@ public class DamageComponent : MonoBehaviour
             DamageComponent otherDamage = otherPlayer.GetComponent<DamageComponent>();
 
             // Damage the other player according to our velocity. The other player will damage us according to their velocity in their collision method.
-            float myVelocity = rb.velocity.magnitude;
+            float myVelocity = cachedVelocity.magnitude;
             float damage = myVelocity * playerData.character.damageMultiplier;
             Debug.Log($"Deal {damage} damage {rb.name} {rb.velocity.magnitude}");
             otherDamage.TakeDamage(damage);
