@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Player))]
 public class DamageComponent : MonoBehaviour
@@ -53,5 +54,15 @@ public class DamageComponent : MonoBehaviour
     public void TakeDamage(float damage)
     {
         playerData.currentHealth -= damage;
+
+        if(playerData.currentHealth <= 0)
+        {
+            Reload();
+        }
+    }
+
+    public void Reload()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }
