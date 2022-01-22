@@ -30,7 +30,6 @@ public class PlayerManager : MonoBehaviour
             var player = PlayerInput.Instantiate(config.playerPrefab, controlScheme: config.controlScheme, pairWithDevice: config.pairWithDevice);
             config.playerData.character = config.character;
             player.GetComponent<Player>().playerData = config.playerData;
-            Debug.Log("SetPlayerData", config.playerData);
             config.camera.target = player.gameObject;
             player.transform.position = config.spawnPoint.position;
         }
