@@ -78,9 +78,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  jumpForce: 500
+  jumpForce: 7
   groundLayer: 6
   canControlInAir: 0
+  jumpCooldown: 0.1
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
 --- !u!114 &1769866172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +143,7 @@ MonoBehaviour:
     m_ActionId: 94028419-76c0-4c8f-9f73-233820b88c45
     m_ActionName: Player/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
