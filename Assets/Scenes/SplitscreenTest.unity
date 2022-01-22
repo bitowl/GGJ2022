@@ -1032,7 +1032,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78c17c6986a1ac4499fd26ff2193279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 4500585265367072386, guid: 5bdcd2b01244996498162f31c4f50758,
+  playerConfigs:
+  - playerPrefab: {fileID: 4500585265367072386, guid: 5bdcd2b01244996498162f31c4f50758,
+      type: 3}
+    controlScheme: P1_Keyboard
+    spawnPoint: {fileID: 1769866175}
+    camera: {fileID: 1925159467}
+    playerData: {fileID: 11400000, guid: 129c708ff4d76c5489070c8da701994c, type: 2}
+    character: {fileID: 11400000, guid: 01fd32098d803bc46bb6e459c24c133a, type: 2}
+  - playerPrefab: {fileID: 7792102871096445745, guid: e8f5e0442438d2245b0a4f7ddc7fc0be,
+      type: 3}
+    controlScheme: P2_Keyboard
+    spawnPoint: {fileID: 1854626245}
+    camera: {fileID: 204774602}
+    playerData: {fileID: 11400000, guid: 472e4df2a88bcad45aea189fa4b6289e, type: 2}
+    character: {fileID: 11400000, guid: 01fd32098d803bc46bb6e459c24c133a, type: 2}
+  player1Prefab: {fileID: 4500585265367072386, guid: 5bdcd2b01244996498162f31c4f50758,
     type: 3}
   player2Prefab: {fileID: 7792102871096445745, guid: e8f5e0442438d2245b0a4f7ddc7fc0be,
     type: 3}

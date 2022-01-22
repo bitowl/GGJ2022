@@ -142,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &10022685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +162,7 @@ MonoBehaviour:
   jumpCooldown: 0.1
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
+  playerData: {fileID: 0}
 --- !u!54 &10022686
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -340,7 +341,7 @@ PrefabInstance:
     - target: {fileID: 4500585265367072386, guid: 5bdcd2b01244996498162f31c4f50758,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4500585265367072389, guid: 5bdcd2b01244996498162f31c4f50758,
         type: 3}

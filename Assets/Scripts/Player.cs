@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public float jumpCooldown = 0.1f;
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
+    public PlayerData playerData;
 
     private bool doJump;
     private Vector2 movementInput;
