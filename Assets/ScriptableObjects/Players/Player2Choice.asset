@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Player2Choice
   m_EditorClassIdentifier: 
   controlScheme: P2_Keyboard
-  character: {fileID: 11400000, guid: f5d1991463494284abc61b673d4ed726, type: 2}
+  character: {fileID: 11400000, guid: 223b419809751e3419b449cfbf00b645, type: 2}
   fallbackDevice: 1

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d9ebdae50cc52a4385efd00602fcdc9, type: 3}
   m_Name: Player1Choice
   m_EditorClassIdentifier: 
-  controlScheme: Gamepad
-  character: {fileID: 11400000, guid: 7db8de4684de7ca4f9503be38775c088, type: 2}
-  fallbackDevice: 2
+  controlScheme: P1_Keyboard
+  character: {fileID: 11400000, guid: 8136e057e34cf8e46b65d54ce5f91bcd, type: 2}
+  fallbackDevice: 1
