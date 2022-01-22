@@ -27,7 +27,8 @@ public class PlayerManager : MonoBehaviour
     {
         foreach (var config in playerConfigs)
         {
-            var player = PlayerInput.Instantiate(config.playerPrefab, controlScheme: config.controlScheme, pairWithDevice: config.pairWithDevice);
+            var player = PlayerInput.Instantiate(config.playerPrefab, controlScheme: config.controlScheme, pairWithDevice: Keyboard.current); // TODO add support for pairing with gamepads?
+            Debug.Log(player.currentControlScheme);
             config.playerData.character = config.character;
             player.GetComponent<Player>().playerData = config.playerData;
             config.camera.target = player.gameObject;
