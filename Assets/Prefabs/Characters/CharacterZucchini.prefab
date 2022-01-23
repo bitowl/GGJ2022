@@ -32,6 +32,7 @@ Transform:
   m_Children:
   - {fileID: 2099244523038555205}
   - {fileID: 7429915109172901464}
+  - {fileID: 5016326764598839503}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -63,10 +64,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderToMove: {fileID: 529071892892800517}
   destructionMeshes:
-  - moreThan: 0.5
+  - moreThan: 0.6
     gameObject: {fileID: 1615054393186838271}
-  - moreThan: 0
+  - moreThan: 0.3
     gameObject: {fileID: 7806863242633850082}
+  - moreThan: 0
+    gameObject: {fileID: 5680800762414928501}
 --- !u!1001 &4640695086073833916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77,6 +80,10 @@ PrefabInstance:
     - target: {fileID: 6201136720457568067, guid: c3b7fe9fe5d29c64e92ec3bc2afd1686, type: 3}
       propertyPath: m_Name
       value: Zuchini
+      objectReference: {fileID: 0}
+    - target: {fileID: 6201136720457568067, guid: c3b7fe9fe5d29c64e92ec3bc2afd1686, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6720791567800555001, guid: c3b7fe9fe5d29c64e92ec3bc2afd1686, type: 3}
       propertyPath: m_RootOrder
@@ -189,6 +196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zuchini Kapput 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3415628454550299842, guid: 2f9f4b0d99ad2cd43803effa3748b2f5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f9f4b0d99ad2cd43803effa3748b2f5, type: 3}
 --- !u!4 &7429915109172901464 stripped
@@ -200,4 +211,71 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3415628454550299842, guid: 2f9f4b0d99ad2cd43803effa3748b2f5, type: 3}
   m_PrefabInstance: {fileID: 4841707399625656352}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5077564966180987832
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 529071892892800516}
+    m_Modifications:
+    - target: {fileID: 282232480698559351, guid: fc5fab1eac965514c8a9cf87839120cc, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 282232480698559351, guid: fc5fab1eac965514c8a9cf87839120cc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 282232480698559351, guid: fc5fab1eac965514c8a9cf87839120cc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 282232480698559351, guid: fc5fab1eac965514c8a9cf87839120cc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 282232480698559351, guid: fc5fab1eac965514c8a9cf87839120cc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.16013955
+      objectReference: {fileID: 0}
+    - target: {fileID: 282232480698559351, guid: fc5fab1eac965514c8a9cf87839120cc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.16013958
+      objectReference: {fileID: 0}
+    - target: {fileID: 282232480698559351, guid: fc5fab1eac965514c8a9cf87839120cc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6887346
+      objectReference: {fileID: 0}
+    - target: {fileID: 282232480698559351, guid: fc5fab1eac965514c8a9cf87839120cc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6887346
+      objectReference: {fileID: 0}
+    - target: {fileID: 282232480698559351, guid: fc5fab1eac965514c8a9cf87839120cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 282232480698559351, guid: fc5fab1eac965514c8a9cf87839120cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 282232480698559351, guid: fc5fab1eac965514c8a9cf87839120cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 153.821
+      objectReference: {fileID: 0}
+    - target: {fileID: 621884183596052941, guid: fc5fab1eac965514c8a9cf87839120cc, type: 3}
+      propertyPath: m_Name
+      value: "Zuchini zerst\xF6rt "
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fc5fab1eac965514c8a9cf87839120cc, type: 3}
+--- !u!4 &5016326764598839503 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 282232480698559351, guid: fc5fab1eac965514c8a9cf87839120cc, type: 3}
+  m_PrefabInstance: {fileID: 5077564966180987832}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5680800762414928501 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 621884183596052941, guid: fc5fab1eac965514c8a9cf87839120cc, type: 3}
+  m_PrefabInstance: {fileID: 5077564966180987832}
   m_PrefabAsset: {fileID: 0}
