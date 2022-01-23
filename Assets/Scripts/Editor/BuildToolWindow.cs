@@ -18,7 +18,7 @@ public class BuildToolWindow : EditorWindow
     }
 
     private string lastScene;
-    private string loadGameScene = "Assets/Scenes/LoadGame.unity";
+    private string loadGameScene = "Assets/Scenes/GameMenu.unity";
 
     void OnGUI()
     {
@@ -27,7 +27,6 @@ public class BuildToolWindow : EditorWindow
             if (EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo())
             {
                 SetPlayModeStartScene(loadGameScene);
-                //EditorSceneManager.OpenScene(loadGameScene);
                 EditorApplication.isPlaying = true;
             }
         }
@@ -54,7 +53,6 @@ public class BuildToolWindow : EditorWindow
         {
             Debug.LogError("Could not find Scene " + scenePath);
         }
-
     }
 
     void Update()

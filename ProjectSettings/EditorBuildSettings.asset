@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SplitscreenTest.unity
-    guid: 851ee21a1b497224b85cac0560279a1f
-  - enabled: 1
     path: Assets/Scenes/GameMenu.unity
     guid: 80298dd5670f4844989abf8be5b6f00a
+  - enabled: 1
+    path: Assets/Scenes/SplitscreenTest.unity
+    guid: 851ee21a1b497224b85cac0560279a1f
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 1c4364629f5828346b17fa07f0f7ecec
