@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 
 public class DamageZone : MonoBehaviour
 {
 
     private List<DamageComponent> damageReceivers = new List<DamageComponent>();
+    [InfoBox("You can use a negative value to create a healing zone.")]
     public float damagePerSecond = 10;
 
     void OnTriggerEnter(Collider collider)

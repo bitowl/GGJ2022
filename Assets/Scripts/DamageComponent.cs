@@ -67,6 +67,22 @@ public class DamageComponent : MonoBehaviour
         {
             Reload();
         }
+
+        // Clamp
+        if (damage < 0)
+        {
+            if (playerData.currentHealth > playerData.maxHealth)
+            {
+                playerData.currentHealth = playerData.maxHealth;
+            }
+        }
+        else
+        {
+            if (playerData.currentHealth < 0)
+            {
+                playerData.currentHealth = 0;
+            }
+        }
     }
 
     public void Reload()

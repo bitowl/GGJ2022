@@ -43,5 +43,11 @@ public class PlayerChoice : ScriptableObject
             }
 
         }
+        set
+        {
+            _inputDevice = value;
+        }
     }
+
+    public bool confirmed;
 }
