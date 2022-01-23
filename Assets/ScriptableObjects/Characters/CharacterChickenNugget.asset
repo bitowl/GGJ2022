@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   damageMultiplier: 1
+  environmentDamageMultiplier: 0.1
   modelPrefab: {fileID: 3954142962493064175, guid: 61ddeb6fbc4bbec44b364aead1ff4990, type: 3}
   team: 1
+  hasRotateControls: 0
+  maxNitroSeconds: 3
+  nitroSpeedMultiplier: 3
