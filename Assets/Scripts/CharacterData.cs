@@ -20,4 +20,6 @@ public class CharacterData : ScriptableObject
     public GameObject modelPrefab;
     public Team team;
     public bool hasRotateControls;
+    public float maxNitroSeconds = 5;
+    public float nitroSpeedMultiplier = 2;
 }
