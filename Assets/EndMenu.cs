@@ -10,17 +10,20 @@ public class EndMenu : MonoBehaviour
     public void NewGame()
     {
         SceneManager.LoadScene("Level");
+        Time.timeScale = 1;
     }
 
     public void ChangeCharacters()
     {
         menuState.state = MenuState.State.CharacterSelection;
         SceneManager.LoadScene("GameMenu");
+        Time.timeScale = 1;
     }
 
     public void QuitGame()
     {
         menuState.state = MenuState.State.Main;
         SceneManager.LoadScene("GameMenu");
+        Time.timeScale = 1;
     }
 }

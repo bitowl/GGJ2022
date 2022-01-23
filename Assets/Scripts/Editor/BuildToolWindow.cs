@@ -35,11 +35,11 @@ public class BuildToolWindow : EditorWindow
 
         if (GUILayout.Button("Build Windows release"))
         {
-            BuildGame("Builds/WindowsRelease/GGJ2022.exe", false, BuildTarget.StandaloneWindows64);
+            BuildGame("Builds/WindowsRelease/BeatTheMeat.exe", false, BuildTarget.StandaloneWindows64);
         }
         if (GUILayout.Button("Build Windows debug"))
         {
-            BuildGame("Builds/WindowsDebug/GGJ2022.exe", true, BuildTarget.StandaloneWindows64);
+            BuildGame("Builds/WindowsDebug/BeatTheMeat.exe", true, BuildTarget.StandaloneWindows64);
         }
     }
     void SetPlayModeStartScene(string scenePath)

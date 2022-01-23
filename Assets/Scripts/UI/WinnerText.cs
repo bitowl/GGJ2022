@@ -10,6 +10,6 @@ public class WinnerText : MonoBehaviour
 
     void Start()
     {
-        GetComponent<TextMeshProUGUI>().text = p1Won.value ? "Vegetables won!" : "Meatables won!";
+        GetComponent<TextMeshProUGUI>().text = p1Won.value ? "You beat the meat!" : "The meat has beaten you!";
     }
 }
