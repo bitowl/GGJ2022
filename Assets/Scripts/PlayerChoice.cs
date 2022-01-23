@@ -7,7 +7,7 @@ public class PlayerChoice : ScriptableObject
 {
     public string controlScheme;
 
-    [Required]
+    //[Required]
     public CharacterData character;
 
     public InputDevice _inputDevice;

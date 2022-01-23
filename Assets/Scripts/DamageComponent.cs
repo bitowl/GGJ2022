@@ -7,6 +7,7 @@ public class DamageComponent : MonoBehaviour
     private PlayerData playerData;
     private Rigidbody rb;
     private Vector3 cachedVelocity;
+    public BoolVar p1Won;
 
     void Awake()
     {
@@ -87,6 +88,7 @@ public class DamageComponent : MonoBehaviour
 
     public void Reload()
     {
+        p1Won.value = (playerData.id != 1);
         SceneManager.LoadScene("GameOver");
     }
 }
