@@ -16,5 +16,11 @@ public class MockPlayerEditor : Editor
         {
             mockPlayer.playerData.currentHealth -= 10;
         }
+
+
+        if (Application.isPlaying && GUILayout.Button("Use 1 second of nitro"))
+        {
+            mockPlayer.playerData.currentNitro -= 1;
+        }
     }
 }

@@ -27,11 +27,15 @@ public class Player : MonoBehaviour
     private float drag;
     private float nextJump = 0;
     private float rotate = 0;
+    private bool useNitro = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         drag = rb.drag;
+
+        playerData.maxNitro = playerData.character.maxNitroSeconds;
+        playerData.currentNitro = playerData.character.maxNitroSeconds;
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -50,6 +54,11 @@ public class Player : MonoBehaviour
             doJump = false;
         }*/
         doJump = context.action.triggered;
+    }
+
+    public void OnNitro(InputAction.CallbackContext context)
+    {
+        useNitro = context.action.triggered;
     }
 
     public void OnRotate(InputAction.CallbackContext context)
@@ -79,6 +88,16 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        float speedMultiplier = 1;
+
+        // Use nitro
+        if (useNitro && playerData.currentNitro > 0)
+        {
+            playerData.currentNitro -= Time.deltaTime;
+            speedMultiplier = playerData.character.nitroSpeedMultiplier;
+        }
+
+
         if (canControlInAir || groundTouched.Count > 0)
         {
             /*float moveHorizontal = Input.GetAxis("Horizontal");
@@ -87,7 +106,7 @@ public class Player : MonoBehaviour
             //Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
             Vector3 movement = new Vector3(movementInput.x, 0.0f, movementInput.y);
 
-            rb.AddForce(movement * speed);
+            rb.AddForce(movement * speed * speedMultiplier);
         }
 
         if (doJump && groundTouched.Count > 0 && nextJump <= 0)
@@ -136,5 +155,11 @@ public class Player : MonoBehaviour
         {
             groundTouched.Remove(collision.collider);
         }
+    }
+
+    public void AddNitro(float amount)
+    {
+        playerData.currentNitro += amount;
+        playerData.currentNitro = Mathf.Clamp(playerData.currentNitro, 0, playerData.maxNitro);
     }
 }

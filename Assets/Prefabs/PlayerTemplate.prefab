@@ -145,6 +145,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 44c7302a-675e-4dc5-ac08-6125fdbf6712
     m_ActionName: Player/Rotate[/Keyboard/q,/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4500585265367072389}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnNitro
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0498a5cd-9157-49c6-a1d0-2115d66a992f
+    m_ActionName: Player/Nitro[/Keyboard/capsLock,/Keyboard/rightShift,/XInputControllerWindows/buttonWest]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

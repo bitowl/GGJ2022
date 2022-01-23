@@ -53,6 +53,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Nitro"",
+                    ""type"": ""Button"",
+                    ""id"": ""0498a5cd-9157-49c6-a1d0-2115d66a992f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -286,6 +295,39 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b6757c3c-8ba0-4486-88fa-3fc6fce9e200"",
+                    ""path"": ""<Keyboard>/capsLock"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""P1_Keyboard"",
+                    ""action"": ""Nitro"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""725dfbce-dd32-4b8f-836f-f3738c02e2a8"",
+                    ""path"": ""<Keyboard>/rightShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""P2_Keyboard"",
+                    ""action"": ""Nitro"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""033adcb3-e1ec-47e1-a037-2d37aea5d0f0"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Nitro"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -331,6 +373,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Rotate = m_Player.FindAction("Rotate", throwIfNotFound: true);
+        m_Player_Nitro = m_Player.FindAction("Nitro", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -393,6 +436,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Rotate;
+    private readonly InputAction m_Player_Nitro;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -400,6 +444,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Rotate => m_Wrapper.m_Player_Rotate;
+        public InputAction @Nitro => m_Wrapper.m_Player_Nitro;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -418,6 +463,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Rotate.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
                 @Rotate.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
                 @Rotate.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
+                @Nitro.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNitro;
+                @Nitro.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNitro;
+                @Nitro.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNitro;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -431,6 +479,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Rotate.started += instance.OnRotate;
                 @Rotate.performed += instance.OnRotate;
                 @Rotate.canceled += instance.OnRotate;
+                @Nitro.started += instance.OnNitro;
+                @Nitro.performed += instance.OnNitro;
+                @Nitro.canceled += instance.OnNitro;
             }
         }
     }
@@ -467,5 +518,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
+        void OnNitro(InputAction.CallbackContext context);
     }
 }
