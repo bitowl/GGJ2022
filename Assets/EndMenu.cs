@@ -5,14 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class EndMenu : MonoBehaviour
 {
+    public MenuState menuState;
+
     public void NewGame()
     {
         SceneManager.LoadScene("Level");
     }
 
+    public void ChangeCharacters()
+    {
+        menuState.state = MenuState.State.CharacterSelection;
+        SceneManager.LoadScene("GameMenu");
+    }
+
     public void QuitGame()
     {
-        Debug.Log("PLS KILL GAME!");
-        Application.Quit();
+        menuState.state = MenuState.State.Main;
+        SceneManager.LoadScene("GameMenu");
     }
 }

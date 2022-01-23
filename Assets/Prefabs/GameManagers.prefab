@@ -55,6 +55,10 @@ MonoBehaviour:
   playerChoices:
   - {fileID: 11400000, guid: 9ccccc02421c4e24fac06a5711329e03, type: 2}
   - {fileID: 11400000, guid: e127a24f2af276a4386c8ac1956c2b7b, type: 2}
+  scoreToWin: 3
+  p1Won: {fileID: 11400000, guid: 012f76bd07df58541a6bbe6a557b181d, type: 2}
+  p1Score: {fileID: 11400000, guid: c107d1560f8e77747a3ac5ee4e09d2cd, type: 2}
+  p2Score: {fileID: 11400000, guid: aae84b6b322b8284b9f8076e1660781e, type: 2}
 --- !u!1 &38202158292032090
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,6 +444,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6880376155012506192, guid: c3930647b63cf054687cd80942302c11, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775567848365555665, guid: c3930647b63cf054687cd80942302c11, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775567848365555665, guid: c3930647b63cf054687cd80942302c11, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775567849161944738, guid: c3930647b63cf054687cd80942302c11, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775567849161944738, guid: c3930647b63cf054687cd80942302c11, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
