@@ -7,7 +7,7 @@ public class EndMenu : MonoBehaviour
 {
     public void NewGame()
     {
-        SceneManager.LoadScene("SplitscreenTest");
+        SceneManager.LoadScene("Level");
     }
 
     public void QuitGame()
