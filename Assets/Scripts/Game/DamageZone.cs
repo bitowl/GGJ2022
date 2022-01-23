@@ -32,7 +32,7 @@ public class DamageZone : MonoBehaviour
     {
         foreach (var receivers in damageReceivers)
         {
-            Debug.Log("DAAMAGE");
+            //Debug.Log("DAAMAGE");
             receivers.TakeDamage(damagePerSecond * Time.deltaTime);
         }
     }

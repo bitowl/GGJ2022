@@ -13,6 +13,7 @@ public enum Team
 [CreateAssetMenu(menuName = "Game/Character Data")]
 public class CharacterData : ScriptableObject
 {
+    public string displayName;
     public float health = 100;
     public float damageMultiplier = 1;
     public float environmentDamageMultiplier = 0.1f;

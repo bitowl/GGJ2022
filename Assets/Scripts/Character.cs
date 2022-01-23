@@ -15,7 +15,7 @@ public class Character : MonoBehaviour
 
     public void ShowModelForHealth(float healthPercentage)
     {
-        Debug.Log($"SHOW FOR {healthPercentage}");
+        //Debug.Log($"SHOW FOR {healthPercentage}");
         bool found = false;
         foreach (var mesh in destructionMeshes)
         {
@@ -27,7 +27,7 @@ public class Character : MonoBehaviour
             {
                 if (healthPercentage >= mesh.moreThan)
                 {
-                    Debug.Log($"Show {mesh.gameObject.name}");
+                    //Debug.Log($"Show {mesh.gameObject.name}");
                     mesh.gameObject.SetActive(true);
                     found = true;
                 }

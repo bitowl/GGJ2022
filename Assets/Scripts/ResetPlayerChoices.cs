@@ -9,7 +9,7 @@ public class ResetPlayerChoices : MonoBehaviour
     public CharacterData p1Character;
     public CharacterData p2Character;
 
-    void Start()
+    void OnEnable()
     {
         p1Choice.controlScheme = "";
         p1Choice.character = p1Character;
