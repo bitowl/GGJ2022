@@ -277,7 +277,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""24226641-6ac7-4e9e-8d96-1e3a44f90837"",
-                    ""path"": ""<Keyboard>/delete"",
+                    ""path"": ""<Keyboard>/numpad1"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""P2_Keyboard"",
@@ -288,7 +288,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""d428ed36-6528-4ed0-8f29-8d9f6f909a14"",
-                    ""path"": ""<Keyboard>/pageDown"",
+                    ""path"": ""<Keyboard>/numpad3"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""P2_Keyboard"",
