@@ -3,13 +3,30 @@ using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour
 {
-
     public GameObject mainMenu;
     public GameObject playerSelectMenu;
     public GameObject characterMenu;
 
     public IntVar p1Score;
     public IntVar p2Score;
+    public MenuState menuState;
+
+    void Start()
+    {
+        // Load menu state that was requested by previous screen
+        switch (menuState.state)
+        {
+            case MenuState.State.Main:
+                ShowMainMenu();
+                break;
+            case MenuState.State.PlayerSelection:
+                ShowPlayerSelectMenu();
+                break;
+            case MenuState.State.CharacterSelection:
+                ShowCharacterMenu();
+                break;
+        }
+    }
 
     public void ShowMainMenu()
     {

@@ -191,6 +191,8 @@ public class ControlDetection : MonoBehaviour
         {
             // TODO maybe add a small timer in which they can still revert their decision
             gameMenu.ShowCharacterMenu();
+            p1Choice.confirmed = false;
+            p2Choice.confirmed = false;
         }
     }
 

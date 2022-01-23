@@ -571,6 +571,7 @@ MonoBehaviour:
   characterMenu: {fileID: 919011957}
   p1Score: {fileID: 11400000, guid: c107d1560f8e77747a3ac5ee4e09d2cd, type: 2}
   p2Score: {fileID: 11400000, guid: aae84b6b322b8284b9f8076e1660781e, type: 2}
+  menuState: {fileID: 11400000, guid: add48490398ab314aa57d191a6e65078, type: 2}
 --- !u!4 &397621183
 Transform:
   m_ObjectHideFlags: 0
@@ -1417,6 +1418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e1f2b57352d67419762c156137d751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuState: {fileID: 0}
 --- !u!1 &1013065300
 GameObject:
   m_ObjectHideFlags: 0
@@ -3206,6 +3208,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 472e4df2a88bcad45aea189fa4b6289e, type: 2}
   - {fileID: 11400000, guid: c107d1560f8e77747a3ac5ee4e09d2cd, type: 2}
   - {fileID: 11400000, guid: aae84b6b322b8284b9f8076e1660781e, type: 2}
+  - {fileID: 11400000, guid: add48490398ab314aa57d191a6e65078, type: 2}
 --- !u!4 &1883657947
 Transform:
   m_ObjectHideFlags: 0
