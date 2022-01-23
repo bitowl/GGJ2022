@@ -55,4 +55,9 @@ public class GameMenu : MonoBehaviour
         p1Score.value = 0;
         p2Score.value = 0;
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
